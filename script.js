@@ -1,950 +1,403 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
-
-:root {
-  --green: #39865b;
-  --dark: #20583d;
-  --mint: #dff3df;
-  --light: #f4faef;
-  --cream: #fff9ed;
-  --text: #254735;
-  --shadow: 0 12px 35px rgba(36, 94, 59, .11);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Nunito', sans-serif;
-  color: var(--text);
-  background: #fbfdf7;
-  line-height: 1.7;
-}
-
-button, input {
-  font: inherit;
-}
-
-button, a {
-  -webkit-tap-highlight-color: transparent;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 7%;
-  background: rgba(255,255,255,.96);
-  box-shadow: 0 3px 18px rgba(0,0,0,.06);
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 23px;
-  font-weight: 900;
-  color: var(--dark);
-}
-
-.brand img {
-  width: 43px;
-  height: 43px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.navbar nav {
-  display: flex;
-  align-items: center;
-  gap: 26px;
-}
-
-.navbar nav a {
-  font-weight: 800;
-  font-size: 14px;
-  transition: .25s;
-}
-
-.navbar nav a:hover {
-  color: #70a75c;
-}
-
-.menu-toggle {
-  display: none;
-  background: var(--mint);
-  border: 0;
-  border-radius: 9px;
-  padding: 7px 12px;
-  font-size: 22px;
-  color: var(--dark);
-}
-
-.hero {
-  min-height: 580px;
-  padding: 75px 8%;
-  display: grid;
-  grid-template-columns: 1.05fr .95fr;
-  align-items: center;
-  gap: 40px;
-  overflow: hidden;
-  background:
-    radial-gradient(ellipse at 90% 15%, #bfe5a9 0, transparent 33%),
-    linear-gradient(120deg, #e8f6db, #f7f8e9 55%, #d9efd1);
-}
-
-.hero-content {
-  max-width: 600px;
-  position: relative;
-  z-index: 2;
-}
-
-.eyebrow {
-  display: inline-block;
-  color: #538c4c;
-  font-weight: 900;
-  font-size: 12px;
-  letter-spacing: 2px;
-  margin-bottom: 14px;
-}
-
-.hero h1 {
-  font-size: clamp(38px, 5vw, 66px);
-  line-height: 1.13;
-  color: #245c3d;
-  font-weight: 900;
-  margin-bottom: 20px;
-}
-
-.hero h1 span {
-  color: #7cae55;
-}
-
-.hero-content > p {
-  max-width: 540px;
-  color: #58705b;
-  font-size: 16px;
-  margin-bottom: 28px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  border: none;
-  border-radius: 30px;
-  padding: 13px 25px;
-  font-weight: 900;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: .25s;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow);
-}
-
-.btn-primary {
-  background: #3e915e;
-  color: white;
-}
-
-.btn-light {
-  background: white;
-  color: var(--dark);
-  border: 1px solid #c8e3c3;
-}
-
-.hero-stats {
-  display: flex;
-  gap: 35px;
-  margin-top: 42px;
-}
-
-.hero-stats div {
-  display: flex;
-  flex-direction: column;
-}
-
-.hero-stats strong {
-  font-size: 22px;
-  color: var(--green);
-  font-weight: 900;
-}
-
-.hero-stats span {
-  font-size: 12px;
-  color: #6e806e;
-}
-
-.hero-art {
-  position: relative;
-  min-height: 390px;
-  display: grid;
-  place-items: center;
-}
-
-.art-circle {
-  position: absolute;
-  width: 370px;
-  height: 370px;
-  border-radius: 50%;
-  background: #c9e6ae;
-  box-shadow: 0 0 0 25px rgba(255,255,255,.3);
-}
-
-.earth-image {
-  position: relative;
-  z-index: 1;
-  width: min(350px, 90%);
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 9px solid white;
-  box-shadow: 0 22px 45px rgba(35,90,55,.2);
-  animation: float 5s ease-in-out infinite;
-}
-
-.floating-card {
-  position: absolute;
-  z-index: 2;
-  bottom: 18px;
-  left: -15px;
-  background: white;
-  padding: 12px 16px;
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  max-width: 255px;
-}
-
-.floating-card img {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  object-fit: cover;
-}
-
-.floating-card strong,
-.floating-card small {
-  display: block;
-}
-
-.floating-card strong {
-  font-size: 13px;
-}
-
-.floating-card small {
-  font-size: 10px;
-  color: #758475;
-}
-
-@keyframes float {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-13px); }
-}
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  padding: 35px 8%;
-  background: white;
-}
-
-.feature-item {
-  padding: 20px;
-  border-right: 1px solid #e5eee2;
-}
-
-.feature-item:last-child {
-  border: none;
-}
-
-.feature-icon {
-  width: 43px;
-  height: 43px;
-  display: grid;
-  place-items: center;
-  border-radius: 13px;
-  background: #e1f2d9;
-  color: #397b4d;
-  font-weight: 900;
-  margin-bottom: 12px;
-}
-
-.feature-item h3 {
-  font-size: 16px;
-  margin-bottom: 4px;
-}
-
-.feature-item p {
-  color: #788879;
-  font-size: 12px;
-}
-
-.section {
-  padding: 85px 8%;
-}
-
-.section-heading {
-  text-align: center;
-  max-width: 650px;
-  margin: 0 auto 42px;
-}
-
-.section-heading h2 {
-  font-size: clamp(28px, 4vw, 40px);
-  color: var(--dark);
-  font-weight: 900;
-  margin-bottom: 8px;
-}
-
-.section-heading p {
-  color: #758575;
-  font-size: 14px;
-}
-
-.layer-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.layer-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 23px;
-  background: white;
-  box-shadow: var(--shadow);
-  transition: .3s;
-}
-
-.layer-card:hover {
-  transform: translateY(-7px);
-}
-
-.layer-card > img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.layer-number {
-  position: absolute;
-  top: 150px;
-  right: 17px;
-  width: 40px;
-  height: 40px;
-  display: grid;
-  place-items: center;
-  background: #e4f2d9;
-  border-radius: 50%;
-  color: var(--dark);
-  font-weight: 900;
-  border: 3px solid white;
-}
-
-.layer-body {
-  padding: 22px;
-}
-
-.layer-body h3 {
-  font-size: 19px;
-  color: var(--dark);
-  margin-bottom: 8px;
-}
-
-.layer-body p {
-  color: #748374;
-  font-size: 12px;
-  min-height: 82px;
-}
-
-.text-button {
-  border: 0;
-  background: transparent;
-  color: #3c8a55;
-  font-weight: 900;
-  cursor: pointer;
-  margin-top: 12px;
-}
-
-.text-button:hover {
-  text-decoration: underline;
-}
-
-.detail-panel {
-  margin-top: 25px;
-  padding: 25px;
-  background: #eaf5e3;
-  border-radius: 20px;
-  color: #315d3c;
-  border: 1px solid #d5e9cb;
-  min-height: 90px;
-}
-
-.detail-panel h3 {
-  margin-bottom: 7px;
-}
-
-.detail-panel p {
-  font-size: 14px;
-}
-
-.explore-section {
-  padding: 85px 8%;
-  background: linear-gradient(140deg, #edf7e6, #f7f9ee);
-}
-
-.explore-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 55px;
-  background: white;
-  border-radius: 28px;
-  padding: 45px;
-  box-shadow: var(--shadow);
-}
-
-.earth-cutaway {
-  width: min(340px, 90%);
-  aspect-ratio: 1;
-  margin: auto;
-  border-radius: 50%;
-  background: #53a8cb;
-  padding: 10px;
-  box-shadow: 0 20px 45px rgba(40,100,90,.18);
-}
-
-.earth-layer {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  transition: .3s;
-}
-
-.crust {
-  background: #579c48;
-  padding: 14px;
-}
-
-.mantle {
-  background: #ed963f;
-  padding: 24px;
-}
-
-.outer-core {
-  background: #f3c84e;
-  padding: 22px;
-}
-
-.inner-core {
-  width: 58%;
-  height: 58%;
-  background: radial-gradient(circle at 35% 30%, #fff3a3, #df7434);
-  border-radius: 50%;
-  box-shadow: 0 0 30px #ffc65b;
-}
-
-.explore-info h3 {
-  font-size: 25px;
-  color: var(--dark);
-  margin-bottom: 10px;
-}
-
-.explore-info > p {
-  color: #788778;
-  font-size: 14px;
-  margin-bottom: 22px;
-}
-
-.layer-choice {
-  display: block;
-  width: 100%;
-  padding: 12px 16px;
-  border: 1px solid #dcebd5;
-  background: #f5faf0;
-  color: #386849;
-  font-weight: 800;
-  text-align: left;
-  border-radius: 12px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: .2s;
-}
-
-.layer-choice:hover,
-.layer-choice.active {
-  background: #dcefd1;
-  border-color: #83b876;
-}
-
-.explore-info .detail-panel {
-  margin-top: 15px;
-}
-
-.game-box, .quiz-box, .quiz-result {
-  max-width: 800px;
-  margin: auto;
-  background: white;
-  border-radius: 25px;
-  padding: 35px;
-  box-shadow: var(--shadow);
-}
-
-.game-top, .quiz-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 14px;
-}
-
-.game-top h3 {
-  color: var(--dark);
-}
-
-#gameScore {
-  background: #e6f3dc;
-  color: #39754a;
-  border-radius: 20px;
-  padding: 6px 14px;
-  font-weight: 900;
-  font-size: 13px;
-}
-
-.game-box > p {
-  color: #778577;
-  font-size: 14px;
-  margin-bottom: 18px;
-}
-
-.matching-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-}
-
-.matching-grid h4 {
-  margin-bottom: 12px;
-  color: var(--dark);
-}
-
-.match-name, .match-answer {
-  width: 100%;
-  min-height: 58px;
-  padding: 12px;
-  display: block;
-  border-radius: 13px;
-  border: 1px solid #dcebd6;
-  background: #f7faf3;
-  color: #385c42;
-  font-weight: 800;
-  text-align: left;
-  cursor: pointer;
-  margin-bottom: 10px;
-  transition: .2s;
-}
-
-.match-name:hover, .match-answer:hover,
-.match-name.selected, .match-answer.selected {
-  border-color: #65a16a;
-  background: #e5f2de;
-}
-
-.match-name.correct, .match-answer.correct {
-  background: #d7f0d8;
-  border-color: #54a45d;
-  cursor: default;
-}
-
-.match-name:disabled, .match-answer:disabled {
-  opacity: .75;
-}
-
-.game-message {
-  min-height: 28px;
-  font-weight: 800;
-  color: #42814e !important;
-  margin: 12px 0 15px !important;
-}
-
-.quiz-section {
-  padding: 85px 8%;
-  background: #eff7e9;
-}
-
-.quiz-top {
-  color: #56805b;
-  font-weight: 800;
-  font-size: 13px;
-}
-
-.progress-track {
-  height: 9px;
-  background: #e3eddf;
-  border-radius: 20px;
-  overflow: hidden;
-  margin-bottom: 28px;
-}
-
-#quizProgress {
-  width: 0;
-  height: 100%;
-  background: #60a46b;
-  transition: .3s;
-}
-
-.quiz-box h3 {
-  font-size: 21px;
-  color: var(--dark);
-  margin-bottom: 20px;
-}
-
-.answer-options {
-  display: grid;
-  gap: 12px;
-}
-
-.answer-option {
-  padding: 14px 17px;
-  border: 1px solid #e0eadd;
-  border-radius: 12px;
-  background: #fbfdf9;
-  text-align: left;
-  font-weight: 700;
-  color: #48634b;
-  cursor: pointer;
-}
-
-.answer-option:hover:not(:disabled) {
-  border-color: #75ae72;
-  background: #edf6e8;
-}
-
-.answer-option.correct {
-  background: #dff2df;
-  border-color: #68a66b;
-}
-
-.answer-option.wrong {
-  background: #fce8e5;
-  border-color: #db8580;
-}
-
-#quizFeedback {
-  min-height: 30px;
-  margin: 15px 0;
-  font-weight: 800;
-  font-size: 14px;
-}
-
-#nextQuestion:disabled {
-  opacity: .45;
-  cursor: not-allowed;
-}
-
-.quiz-result {
-  text-align: center;
-}
-
-.quiz-result h3 {
-  color: var(--dark);
-}
-
-.quiz-result strong {
-  display: block;
-  font-size: 60px;
-  color: #4b955c;
-  margin: 12px;
-}
-
-.profile-box {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  padding: 30px;
-  max-width: 700px;
-  margin: auto;
-  border-radius: 22px;
-  background: white;
-  box-shadow: var(--shadow);
-}
-
-.profile-avatar {
-  width: 85px;
-  height: 85px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: #dcefd3;
-  color: #3c8051;
-  font-size: 27px;
-  font-weight: 900;
-}
-
-.profile-content {
-  flex: 1;
-}
-
-.profile-content label {
-  display: block;
-  font-weight: 900;
-  margin-bottom: 6px;
-}
-
-.profile-content input {
-  width: 100%;
-  border: 1px solid #dce8d8;
-  border-radius: 10px;
-  padding: 11px 13px;
-  margin-bottom: 12px;
-  outline: none;
-}
-
-.profile-content input:focus {
-  border-color: #6ba36e;
-}
-
-.progress-cards {
-  max-width: 800px;
-  margin: 25px auto 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-.progress-cards div {
-  padding: 24px 12px;
-  background: #e9f4e2;
-  border-radius: 17px;
-  text-align: center;
-}
-
-.progress-cards strong, .progress-cards span {
-  display: block;
-}
-
-.progress-cards strong {
-  font-size: 27px;
-  color: #34784a;
-}
-
-.progress-cards span {
-  font-size: 12px;
-  color: #6d806c;
-}
-
-footer {
-  padding: 45px 8%;
-  background: #245a3e;
-  color: white;
-  text-align: center;
-}
-
-.footer-brand {
-  font-size: 24px;
-  font-weight: 900;
-}
-
-footer p {
-  font-size: 13px;
-  opacity: .8;
-}
-
-.copyright {
-  margin-top: 20px;
-  font-size: 11px;
-}
-
-.back-top {
-  position: fixed;
-  bottom: 22px;
-  right: 22px;
-  width: 43px;
-  height: 43px;
-  background: #39865b;
-  color: white;
-  border: 0;
-  border-radius: 50%;
-  font-size: 23px;
-  cursor: pointer;
-  opacity: 0;
-  pointer-events: none;
-  transition: .3s;
-}
-
-.back-top.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-@media (max-width: 1000px) {
-  .layer-grid {
-    grid-template-columns: repeat(2, 1fr);
+// ========================================
+// DATA MATERI LAPISAN BUMI
+// ========================================
+
+const layerData = {
+  "kerak": {
+    title: "Kerak Bumi",
+    description: "Kerak Bumi merupakan lapisan paling luar dan paling tipis dari struktur Bumi. Lapisan ini menjadi tempat berlangsungnya kehidupan manusia, hewan, dan tumbuhan.",
+    facts: [
+      "Terdiri atas kerak benua dan kerak samudra.",
+      "Ketebalannya sekitar 5–70 km.",
+      "Tersusun dari berbagai jenis batuan dan mineral.",
+      "Bagian kerak bersama mantel paling atas membentuk litosfer."
+    ]
+  },
+  "mantel": {
+    title: "Mantel Bumi",
+    description: "Mantel Bumi berada di bawah kerak dan merupakan lapisan paling tebal. Mantel tersusun atas batuan panas yang dapat berubah bentuk dan mengalir sangat lambat dalam waktu geologis.",
+    facts: [
+      "Ketebalannya sekitar 2.900 km.",
+      "Sebagian besar tersusun dari batuan silikat.",
+      "Memiliki suhu dan tekanan yang sangat tinggi.",
+      "Pergerakan material mantel berperan dalam pergerakan lempeng tektonik."
+    ]
+  },
+  "inti-luar": {
+    title: "Inti Luar Bumi",
+    description: "Inti luar adalah lapisan logam cair yang terletak di antara mantel dan inti dalam. Lapisan ini terutama tersusun atas besi dan nikel.",
+    facts: [
+      "Ketebalannya sekitar 2.200 km.",
+      "Berada dalam keadaan cair.",
+      "Suhu sangat tinggi.",
+      "Pergerakan logam cair membantu menghasilkan medan magnet Bumi."
+    ]
+  },
+  "inti-dalam": {
+    title: "Inti Dalam Bumi",
+    description: "Inti dalam merupakan bagian paling pusat dari Bumi. Meskipun suhunya sangat tinggi, tekanan yang luar biasa besar membuat material utamanya tetap berada dalam keadaan padat.",
+    facts: [
+      "Jari-jarinya sekitar 1.220 km.",
+      "Terutama tersusun atas besi dan nikel.",
+      "Berada dalam keadaan padat.",
+      "Memiliki tekanan yang sangat besar."
+    ]
+  }
+};
+
+// ========================================
+// MENU NAVIGASI HP
+// ========================================
+
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+});
+
+navMenu.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("open");
+  });
+});
+
+// ========================================
+// MATERI DAN EKSPLORASI
+// ========================================
+
+const learned = new Set();
+
+function showLayer(key, target) {
+  const data = layerData[key];
+  if (!data) return;
+
+  learned.add(key);
+
+  target.innerHTML = `
+    <h3>${data.title}</h3>
+    <p>${data.description}</p>
+    <br>
+    <strong>Karakteristik dan fakta menarik:</strong>
+    <ul>
+      ${data.facts.map(fact => `<li>${fact}</li>`).join("")}
+    </ul>
+  `;
+
+  updateProfile();
+}
+
+document.querySelectorAll("[data-layer]").forEach(button => {
+  button.addEventListener("click", () => {
+    const key = button.dataset.layer;
+
+    if (button.classList.contains("layer-choice")) {
+      document.querySelectorAll(".layer-choice").forEach(item => {
+        item.classList.remove("active");
+      });
+      button.classList.add("active");
+      showLayer(key, document.getElementById("exploreDetail"));
+    } else {
+      showLayer(key, document.getElementById("materiDetail"));
+    }
+  });
+});
+
+// ========================================
+// GAME MENCOCOKKAN
+// ========================================
+
+let selectedName = null;
+let selectedAnswer = null;
+let gameCorrect = new Set();
+
+const gameMessage = document.getElementById("gameMessage");
+
+function updateGameScore() {
+  document.getElementById("gameScore").textContent =
+    `Skor: ${gameCorrect.size} / 4`;
+
+  const oldBest = Number(localStorage.getItem("earthGameBest") || 0);
+  if (gameCorrect.size > oldBest) {
+    localStorage.setItem("earthGameBest", gameCorrect.size);
   }
 
-  .navbar nav {
-    gap: 14px;
-  }
-
-  .hero {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
+  updateProfile();
 }
 
-@media (max-width: 700px) {
-  .navbar {
-    padding: 12px 5%;
+function checkMatch() {
+  if (!selectedName || !selectedAnswer) return;
+
+  if (selectedName === selectedAnswer) {
+    gameCorrect.add(selectedName);
+
+    document.querySelectorAll(
+      `[data-match="${selectedName}"], [data-answer="${selectedAnswer}"]`
+    ).forEach(button => {
+      button.classList.remove("selected");
+      button.classList.add("correct");
+      button.disabled = true;
+    });
+
+    gameMessage.textContent = "Benar! Pasangan berhasil ditemukan.";
+    updateGameScore();
+
+    if (gameCorrect.size === 4) {
+      gameMessage.textContent =
+        "Hebat! Semua pasangan berhasil kamu cocokkan.";
+    }
+  } else {
+    gameMessage.textContent =
+      "Belum tepat. Coba periksa kembali pasangan tersebut.";
   }
 
-  .brand {
-    font-size: 19px;
-  }
+  selectedName = null;
+  selectedAnswer = null;
 
-  .menu-toggle {
-    display: block;
-  }
-
-  .navbar nav {
-    display: none;
-    position: absolute;
-    top: 68px;
-    left: 0;
-    width: 100%;
-    padding: 18px 6%;
-    background: white;
-    flex-direction: column;
-    align-items: stretch;
-    box-shadow: var(--shadow);
-  }
-
-  .navbar nav.open {
-    display: flex;
-  }
-
-  .navbar nav a {
-    padding: 8px 0;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-    padding: 55px 7%;
-    text-align: center;
-  }
-
-  .hero-content {
-    margin: auto;
-  }
-
-  .hero-buttons, .hero-stats {
-    justify-content: center;
-  }
-
-  .hero-art {
-    min-height: 330px;
-  }
-
-  .art-circle {
-    width: 270px;
-    height: 270px;
-  }
-
-  .earth-image {
-    width: 260px;
-  }
-
-  .floating-card {
-    left: 0;
-    bottom: 0;
-  }
-
-  .features {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 25px 5%;
-  }
-
-  .feature-item {
-    border: none;
-  }
-
-  .section, .explore-section, .quiz-section {
-    padding: 60px 6%;
-  }
-
-  .layer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .layer-card > img {
-    height: 210px;
-  }
-
-  .layer-body p {
-    min-height: auto;
-  }
-
-  .explore-layout {
-    grid-template-columns: 1fr;
-    padding: 25px 18px;
-    gap: 30px;
-  }
-
-  .earth-cutaway {
-    width: 260px;
-  }
-
-  .game-box, .quiz-box, .quiz-result {
-    padding: 23px 18px;
-  }
-
-  .matching-grid {
-    gap: 12px;
-  }
-
-  .match-name, .match-answer {
-    font-size: 12px;
-    padding: 10px;
-    min-height: 68px;
-  }
-
-  .profile-box {
-    align-items: flex-start;
-    flex-direction: column;
-  }
+  setTimeout(() => {
+    document.querySelectorAll(".match-name, .match-answer")
+      .forEach(button => button.classList.remove("selected"));
+  }, 350);
 }
 
-@media (max-width: 380px) {
-  .progress-cards {
-    grid-template-columns: 1fr;
+document.querySelectorAll(".match-name").forEach(button => {
+  button.addEventListener("click", () => {
+    if (button.disabled) return;
+
+    selectedName = button.dataset.match;
+
+    document.querySelectorAll(".match-name")
+      .forEach(item => item.classList.remove("selected"));
+
+    button.classList.add("selected");
+    checkMatch();
+  });
+});
+
+document.querySelectorAll(".match-answer").forEach(button => {
+  button.addEventListener("click", () => {
+    if (button.disabled) return;
+
+    selectedAnswer = button.dataset.answer;
+
+    document.querySelectorAll(".match-answer")
+      .forEach(item => item.classList.remove("selected"));
+
+    button.classList.add("selected");
+    checkMatch();
+  });
+});
+
+document.getElementById("resetGame").addEventListener("click", () => {
+  selectedName = null;
+  selectedAnswer = null;
+  gameCorrect.clear();
+
+  document.querySelectorAll(".match-name, .match-answer")
+    .forEach(button => {
+      button.disabled = false;
+      button.classList.remove("selected", "correct");
+    });
+
+  gameMessage.textContent = "Permainan dimulai kembali. Selamat mencoba!";
+  updateGameScore();
+});
+
+// ========================================
+// KUIS LAPISAN BUMI
+// ========================================
+
+const questions = [
+  {
+    question: "Lapisan paling luar dari struktur Bumi adalah ...",
+    answers: ["Mantel", "Kerak Bumi", "Inti Luar", "Inti Dalam"],
+    correct: 1,
+    explanation: "Kerak Bumi merupakan lapisan paling luar."
+  },
+  {
+    question: "Lapisan Bumi yang paling tebal adalah ...",
+    answers: ["Kerak", "Inti Dalam", "Mantel", "Inti Luar"],
+    correct: 2,
+    explanation: "Mantel merupakan lapisan Bumi paling tebal."
+  },
+  {
+    question: "Inti luar Bumi memiliki bentuk ...",
+    answers: ["Padat", "Gas", "Cair", "Uap"],
+    correct: 2,
+    explanation: "Inti luar tersusun atas logam cair, terutama besi dan nikel."
+  },
+  {
+    question: "Inti dalam Bumi terutama tersusun dari ...",
+    answers: ["Air dan udara", "Besi dan nikel", "Pasir dan tanah", "Batuan sedimen"],
+    correct: 1,
+    explanation: "Inti dalam terutama tersusun dari besi dan nikel dalam keadaan padat."
+  },
+  {
+    question: "Pergerakan material cair pada inti luar berperan dalam pembentukan ...",
+    answers: ["Awan", "Hujan", "Medan magnet Bumi", "Gelombang laut"],
+    correct: 2,
+    explanation: "Gerakan logam cair pada inti luar membantu menghasilkan medan magnet Bumi."
+  }
+];
+
+let currentQuestion = 0;
+let quizScore = 0;
+let answered = false;
+
+const questionText = document.getElementById("questionText");
+const answerOptions = document.getElementById("answerOptions");
+const quizFeedback = document.getElementById("quizFeedback");
+const nextButton = document.getElementById("nextQuestion");
+
+function showQuestion() {
+  answered = false;
+
+  const question = questions[currentQuestion];
+
+  document.getElementById("questionNumber").textContent =
+    `Pertanyaan ${currentQuestion + 1} dari ${questions.length}`;
+
+  document.getElementById("quizProgressText").textContent =
+    `${Math.round(currentQuestion / questions.length * 100)}%`;
+
+  document.getElementById("quizProgress").style.width =
+    `${currentQuestion / questions.length * 100}%`;
+
+  questionText.textContent = question.question;
+  answerOptions.innerHTML = "";
+  quizFeedback.textContent = "";
+  nextButton.disabled = true;
+
+  question.answers.forEach((answer, index) => {
+    const button = document.createElement("button");
+    button.className = "answer-option";
+    button.textContent = answer;
+
+    button.addEventListener("click", () => {
+      if (answered) return;
+
+      answered = true;
+
+      const buttons = answerOptions.querySelectorAll("button");
+      buttons.forEach((item, i) => {
+        item.disabled = true;
+
+        if (i === question.correct) {
+          item.classList.add("correct");
+        }
+      });
+
+      if (index === question.correct) {
+        quizScore++;
+        quizFeedback.textContent = "Jawaban benar! " + question.explanation;
+        quizFeedback.style.color = "#37814b";
+      } else {
+        button.classList.add("wrong");
+        quizFeedback.textContent = "Belum tepat. " + question.explanation;
+        quizFeedback.style.color = "#b25d4d";
+      }
+
+      nextButton.disabled = false;
+      nextButton.textContent =
+        currentQuestion === questions.length - 1
+          ? "Lihat Hasil"
+          : "Soal Berikutnya";
+    });
+
+    answerOptions.appendChild(button);
+  });
+}
+
+function finishQuiz() {
+  const score = Math.round(quizScore / questions.length * 100);
+  const previousBest = Number(localStorage.getItem("earthBestScore") || 0);
+
+  if (score > previousBest) {
+    localStorage.setItem("earthBestScore", score);
   }
 
-  .hero-stats {
-    gap: 15px;
-  }
+  document.getElementById("quizBox").hidden = true;
+  document.getElementById("quizResult").hidden = false;
+  document.getElementById("finalScore").textContent = score;
+
+  document.getElementById("resultMessage").textContent =
+    score >= 80
+      ? "Hebat! Kamu sudah memahami materi lapisan Bumi dengan baik."
+      : score >= 60
+      ? "Bagus! Terus belajar agar pemahamanmu semakin meningkat."
+      : "Tetap semangat! Pelajari kembali materi dan coba lagi.";
+
+  updateProfile();
 }
+
+nextButton.addEventListener("click", () => {
+  if (!answered) return;
+
+  currentQuestion++;
+
+  if (currentQuestion >= questions.length) {
+    finishQuiz();
+  } else {
+    showQuestion();
+  }
+});
+
+document.getElementById("retryQuiz").addEventListener("click", () => {
+  currentQuestion = 0;
+  quizScore = 0;
+
+  document.getElementById("quizBox").hidden = false;
+  document.getElementById("quizResult").hidden = true;
+
+  nextButton.textContent = "Soal Berikutnya";
+  showQuestion();
+});
+
+// ========================================
+// PROFIL DAN PENYIMPANAN
+// ========================================
+
+const userName = document.getElementById("userName");
+
+userName.value = localStorage.getItem("earthUserName") || "";
+
+document.getElementById("saveName").addEventListener("click", () => {
+  const name = userName.value.trim();
+
+  if (!name) {
+    alert("Silakan masukkan nama terlebih dahulu.");
+    return;
+  }
+
+  localStorage.setItem("earthUserName", name);
+  alert("Nama berhasil disimpan.");
+});
+
+function updateProfile() {
+  document.getElementById("learnedCount").textContent = learned.size;
+  document.getElementById("bestScore").textContent =
+    Number(localStorage.getItem("earthBestScore") || 0);
+
+  document.getElementById("gameBest").textContent =
+    Number(localStorage.getItem("earthGameBest") || 0);
+}
+
+updateProfile();
+showQuestion();
+
+// ========================================
+// TOMBOL KEMBALI KE ATAS
+// ========================================
+
+const backTop = document.getElementById("backTop");
+
+window.addEventListener("scroll", () => {
+  backTop.classList.toggle("show", window.scrollY > 350);
+});
+
+backTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
