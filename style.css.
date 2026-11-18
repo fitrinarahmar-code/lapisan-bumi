@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --green: #347FC4;
+  --dark: #225A91;
+  --mint: #DDF2FF;
+  --light: #EFF8FF;
+  --cream: #FFF9E9;
+  --text: #34536F;
+  --shadow: 0 12px 35px rgba(52, 127, 196, .12);
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--text);
+  background: #F8FCFF;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Fredoka', sans-serif;
+}
 .layer-card:nth-child(1) { border-bottom: 5px solid #36a5ef; }
 .layer-card:nth-child(2) { border-bottom: 5px solid #ffad48; }
 .layer-card:nth-child(3) { border-bottom: 5px solid #f27669; }
