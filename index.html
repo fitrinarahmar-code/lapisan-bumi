@@ -3,500 +3,277 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#e8f8e9">
-  <meta name="description" content="Jelajah Bumi, media pembelajaran interaktif tentang lapisan Bumi.">
+  <meta name="description" content="Website edukasi interaktif untuk mengenal lapisan Bumi.">
   <title>Jelajah Bumi | Dunia Lapisan Bumi</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
-  <a href="#beranda" class="logo">
-    <span class="logo-globe">🌍</span>
-    <span>Jelajah<span class="logo-green">Bumi</span></span>
+  <a class="brand" href="#beranda">
+    <img src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=100&h=100&fit=crop" alt="Ilustrasi planet Bumi">
+    <span>Jelajah Bumi</span>
   </a>
 
-  <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">
-    ☰
-  </button>
+  <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
 
   <nav id="navMenu">
-    <a href="#beranda">🏠 Beranda</a>
-    <a href="#materi">📚 Materi</a>
-    <a href="#eksplorasi">🔍 Eksplorasi</a>
-    <a href="#game">🎮 Game</a>
-    <a href="#kuis">🏆 Kuis</a>
-    <a href="#profil">👤 Profil</a>
-  </nav>
-</header>
-
-<main>
-
-<!-- BERANDA -->
-<section class="hero" id="beranda">
-
-  <div class="cloud cloud-one">☁️</div>
-  <div class="cloud cloud-two">☁️</div>
-  <div class="hero-star star-one">✦</div>
-  <div class="hero-star star-two">✧</div>
-
-  <div class="hero-text">
-
-    <div class="welcome-label">
-      🌱 SELAMAT DATANG DI DUNIA PENGETAHUAN
-    </div>
-
-    <h1>
-      Yuk, Jelajahi
-      <span>Lapisan Bumi!</span>
-    </h1>
-
-    <p>
-      Hai, penjelajah cilik! Ayo mengenal bagian dalam
-      planet Bumi, menemukan keajaiban alam, dan belajar
-      tentang empat lapisan Bumi melalui kegiatan
-      yang seru dan menyenangkan.
-    </p>
-
-    <div class="hero-buttons">
-      <a href="#materi" class="btn primary">
-        🚀 Mulai Belajar
-      </a>
-
-      <a href="#eksplorasi" class="btn secondary">
-        🔍 Jelajahi Bumi
-      </a>
-    </div>
-
-    <div class="hero-statistics">
-      <div>
-        <strong>🌍 4</strong>
-        <span>Lapisan Bumi</span>
-      </div>
-      <div>
-        <strong>📚 Seru</strong>
-        <span>Materi Belajar</span>
-      </div>
-      <div>
-        <strong>🎮 Asyik</strong>
-        <span>Game Edukasi</span>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="hero-visual">
-
-    <div class="sun">☀️</div>
-
-    <div class="earth-decoration">
-      <div class="earth-globe">🌎</div>
-      <span class="earth-face">😊</span>
-    </div>
-
-    <div class="earth-cutaway">
-      <div class="cutaway-title">Bagian Dalam Bumi</div>
-
-      <div class="cutaway-earth">
-        <div class="cut-crust">
-          <div class="cut-mantle">
-            <div class="cut-outer">
-              <div class="cut-inner"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="earth-label label-one">
-      🌿 Kerak Bumi
-    </div>
-
-    <div class="earth-label label-two">
-      🔥 Mantel Bumi
-    </div>
-
-    <div class="earth-label label-three">
-      🟡 Inti Luar
-    </div>
-
-    <div class="earth-label label-four">
-      ❤️ Inti Dalam
-    </div>
-
-    <div class="mascot">
-      🧑🏻‍🚀
-      <span>Yuk belajar bersama!</span>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- KARTU FITUR -->
-<section class="features-section">
-
-  <div class="section-heading">
-    <span>🌈 PETUALANGAN BELAJAR</span>
-    <h2>Apa yang Ingin Kamu Jelajahi?</h2>
-    <p>Pilih kegiatan belajar yang kamu sukai!</p>
-  </div>
-
-  <div class="features">
-
-    <a href="#materi" class="feature-card card-blue">
-      <div class="feature-picture">📚</div>
-      <h3>Materi Pembelajaran</h3>
-      <p>
-        Kenali lebih dalam tentang kerak, mantel,
-        inti luar, dan inti dalam Bumi.
-      </p>
-      <b>Pelajari sekarang →</b>
-    </a>
-
-    <a href="#eksplorasi" class="feature-card card-pink">
-      <div class="feature-picture">🔭</div>
-      <h3>Eksplorasi Interaktif</h3>
-      <p>
-        Jelajahi struktur Bumi dan temukan
-        berbagai fakta menarik.
-      </p>
-      <b>Mulai eksplorasi →</b>
-    </a>
-
-    <a href="#game" class="feature-card card-green">
-      <div class="feature-picture">🎮</div>
-      <h3>Game Edukasi</h3>
-      <p>
-        Asah pengetahuan dengan permainan
-        mencocokkan lapisan Bumi.
-      </p>
-      <b>Main sekarang →</b>
-    </a>
-
-    <a href="#kuis" class="feature-card card-yellow">
-      <div class="feature-picture">🏆</div>
-      <h3>Kuis Seru</h3>
-      <p>
-        Uji kemampuanmu dan dapatkan
-        nilai terbaik!
-      </p>
-      <b>Ikuti kuis →</b>
-    </a>
-
-  </div>
-</section>
-
-
-<!-- MATERI -->
-<section class="section material-section" id="materi">
-
-  <div class="section-heading">
-    <span>📚 MARI BELAJAR</span>
-    <h2>Mengenal Lapisan Bumi</h2>
-    <p>
-      Bumi memiliki empat lapisan utama.
-      Yuk, kenali satu per satu!
-    </p>
-  </div>
-
-  <div class="material-layout">
-
-    <div class="material-art">
-      <div class="earth-big">🌎</div>
-
-      <div class="earth-section-art">
-        <div class="earth-section-inner">
-          <div class="earth-section-core"></div>
-        </div>
-      </div>
-
-      <div class="art-caption">
-        🌍 Struktur bagian dalam Bumi
-      </div>
-    </div>
-
-    <div class="material-list">
-
-      <button class="material-button active" data-layer="crust">
-        <span>🌿</span> Kerak Bumi
-        <span class="arrow">›</span>
-      </button>
-
-      <button class="material-button" data-layer="mantle">
-        <span>🟠</span> Mantel Bumi
-        <span class="arrow">›</span>
-      </button>
-
-      <button class="material-button" data-layer="outer">
-        <span>🟡</span> Inti Luar
-        <span class="arrow">›</span>
-      </button>
-
-      <button class="material-button" data-layer="inner">
-        <span>🔴</span> Inti Dalam
-        <span class="arrow">›</span>
-      </button>
-
-      <div class="material-detail" id="materialDetail"></div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- EKSPLORASI -->
-<section class="section exploration-section" id="eksplorasi">
-
-  <div class="section-heading">
-    <span>🔍 AYO BEREKSPLORASI</span>
-    <h2>Petualangan Menuju Pusat Bumi</h2>
-    <p>
-      Pilih lapisan untuk mengetahui karakteristiknya.
-    </p>
-  </div>
-
-  <div class="exploration-card">
-
-    <div class="exploration-illustration">
-      <div class="planet-circle">🌍</div>
-      <div class="orbit-decoration"></div>
-      <div class="explore-caption">
-        🚀 Misi menjelajahi Bumi
-      </div>
-    </div>
-
-    <div class="exploration-content">
-
-      <h3>Siap menjadi penjelajah Bumi?</h3>
-
-      <p>
-        Setiap lapisan Bumi mempunyai karakteristik
-        yang berbeda. Klik tombol di bawah untuk
-        memulai petualanganmu!
-      </p>
-
-      <div class="explore-buttons">
-        <button data-explore="crust">Kerak</button>
-        <button data-explore="mantle">Mantel</button>
-        <button data-explore="outer">Inti Luar</button>
-        <button data-explore="inner">Inti Dalam</button>
-      </div>
-
-      <div class="explore-detail" id="exploreDetail">
-        ✨ Pilih lapisan Bumi untuk memulai eksplorasi.
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- GAME -->
-<section class="section game-section" id="game">
-
-  <div class="section-heading">
-    <span>🎮 WAKTUNYA BERMAIN</span>
-    <h2>Game Cocokkan Lapisan Bumi</h2>
-    <p>
-      Pasangkan nama lapisan dengan karakteristik yang benar!
-    </p>
-  </div>
-
-  <div class="game-card">
-
-    <div class="game-header">
-      <span>🧩</span>
-      <h3>Tantangan Penjelajah Bumi</h3>
-      <p>Temukan empat pasangan yang tepat.</p>
-    </div>
-
-    <div class="game-columns">
-
-      <div>
-        <h3>Nama Lapisan</h3>
-
-        <button class="game-option" data-side="name" data-answer="crust">
-          Kerak Bumi
-        </button>
-
-        <button class="game-option" data-side="name" data-answer="mantle">
-          Mantel Bumi
-        </button>
-
-        <button class="game-option" data-side="name" data-answer="outer">
-          Inti Luar
-        </button>
-
-        <button class="game-option" data-side="name" data-answer="inner">
-          Inti Dalam
-        </button>
-      </div>
-
-      <div>
-        <h3>Karakteristik</h3>
-
-        <button class="game-option" data-side="fact" data-answer="inner">
-          Bagian terdalam dan padat
-        </button>
-
-        <button class="game-option" data-side="fact" data-answer="crust">
-          Lapisan paling luar Bumi
-        </button>
-
-        <button class="game-option" data-side="fact" data-answer="mantle">
-          Lapisan paling tebal
-        </button>
-
-        <button class="game-option" data-side="fact" data-answer="outer">
-          Tersusun dari logam cair
-        </button>
-      </div>
-
-    </div>
-
-    <p id="gameMessage">🌟 Pilih satu nama dan satu karakteristik!</p>
-
-    <h3 id="gameScore">Skor: 0 / 4</h3>
-
-    <button class="btn primary" id="resetGame">
-      ↻ Ulangi Permainan
-    </button>
-
-  </div>
-</section>
-
-
-<!-- KUIS -->
-<section class="section quiz-section" id="kuis">
-
-  <div class="section-heading">
-    <span>🏆 UJI PENGETAHUANMU</span>
-    <h2>Kuis Lapisan Bumi</h2>
-    <p>
-      Jawab pertanyaan dan buktikan kemampuanmu!
-    </p>
-  </div>
-
-  <div class="quiz-card" id="quizCard">
-
-    <div class="quiz-progress">
-      <span id="questionNumber">Soal 1 dari 5</span>
-
-      <div class="progress-track">
-        <div id="progressBar"></div>
-      </div>
-    </div>
-
-    <h3 id="question"></h3>
-
-    <div id="answers"></div>
-
-    <p id="feedback">Pilih jawaban yang benar.</p>
-
-    <button class="btn primary" id="nextQuestion" disabled>
-      Selanjutnya →
-    </button>
-
-  </div>
-
-  <div id="quizResult" class="quiz-card hidden"></div>
-
-</section>
-
-
-<!-- FAKTA MENARIK -->
-<section class="fact-section">
-
-  <div class="fact-card">
-
-    <div class="fact-illustration">
-      🌋
-    </div>
-
-    <div class="fact-content">
-      <span>💡 TAHUKAH KAMU?</span>
-
-      <h2>Fakta Menarik tentang Bumi!</h2>
-
-      <p>
-        Mantel Bumi merupakan lapisan paling tebal
-        di dalam Bumi. Ketebalannya mencapai sekitar
-        2.900 km. Menarik sekali, bukan?
-      </p>
-
-      <a href="#materi" class="btn fact-button">
-        Pelajari Lebih Lanjut →
-      </a>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- TENTANG WEBSITE -->
-<section class="section profile-section" id="profil">
-
-  <div class="profile-card">
-
-    <div class="profile-art">
-      🌎
-      <span>💚</span>
-    </div>
-
-    <div class="profile-content">
-
-      <span>🌱 TENTANG KAMI</span>
-
-      <h2>Belajar Bumi Jadi Lebih Menyenangkan!</h2>
-
-      <p>
-        Jelajah Bumi adalah media pembelajaran digital
-        yang dirancang untuk membantu pengguna memahami
-        struktur dan karakteristik lapisan Bumi.
-      </p>
-
-      <p>
-        Melalui materi, eksplorasi, permainan, dan kuis,
-        belajar ilmu pengetahuan menjadi lebih menarik,
-        interaktif, dan mudah dipahami.
-      </p>
-
-      <strong>🌍 Belajar, Jelajahi, dan Cintai Bumi!</strong>
-
-    </div>
-  </div>
-</section>
-
-</main>
-
-
-<!-- FOOTER -->
-<footer class="footer">
-
-  <div class="footer-logo">🌍 JelajahBumi</div>
-
-  <p>Petualangan belajar mengenal planet Bumi.</p>
-
-  <div class="footer-links">
     <a href="#beranda">Beranda</a>
     <a href="#materi">Materi</a>
     <a href="#eksplorasi">Eksplorasi</a>
     <a href="#game">Game</a>
     <a href="#kuis">Kuis</a>
-  </div>
+    <a href="#profil">Profil</a>
+  </nav>
+</header>
 
-  <div class="footer-bottom">
-    © 2026 Jelajah Bumi | Media Pembelajaran Interaktif
-  </div>
+<main>
 
+  <!-- BERANDA -->
+  <section class="hero" id="beranda">
+    <div class="hero-content">
+      <span class="eyebrow">SELAMAT DATANG DI DUNIA PENGETAHUAN</span>
+      <h1>Yuk, Jelajahi <span>Lapisan Bumi!</span></h1>
+      <p>
+        Kenali dunia di dalam planet Bumi, temukan keajaiban alam,
+        dan pelajari empat lapisan Bumi melalui pengalaman belajar
+        yang menarik dan menyenangkan.
+      </p>
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="#materi">Mulai Belajar</a>
+        <a class="btn btn-light" href="#eksplorasi">Jelajahi Bumi</a>
+      </div>
+
+      <div class="hero-stats">
+        <div><strong>4</strong><span>Lapisan Bumi</span></div>
+        <div><strong>5</strong><span>Materi Utama</span></div>
+        <div><strong>Interaktif</strong><span>Belajar Seru</span></div>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <div class="art-circle"></div>
+      <img class="earth-image"
+        src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=850"
+        alt="Planet Bumi dari luar angkasa">
+      <div class="floating-card">
+        <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=200" alt="Ilustrasi luar angkasa">
+        <div><strong>Petualangan Dimulai!</strong><small>Kenali rumah kita, planet Bumi.</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEUNGGULAN -->
+  <section class="features">
+    <div class="feature-item">
+      <div class="feature-icon">01</div>
+      <h3>Belajar Visual</h3>
+      <p>Kenali Bumi melalui gambar dan ilustrasi.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">02</div>
+      <h3>Eksplorasi</h3>
+      <p>Pilih lapisan Bumi dan pelajari bagiannya.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">03</div>
+      <h3>Game Edukasi</h3>
+      <p>Uji pemahaman melalui permainan.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">04</div>
+      <h3>Kuis Otomatis</h3>
+      <p>Kerjakan soal dan lihat hasil nilaimu.</p>
+    </div>
+  </section>
+
+  <!-- MATERI -->
+  <section class="section" id="materi">
+    <div class="section-heading">
+      <span class="eyebrow">RUANG BELAJAR</span>
+      <h2>Mengenal Lapisan Bumi</h2>
+      <p>Bumi memiliki empat lapisan utama yang menyusun bagian dalam planet kita.</p>
+    </div>
+
+    <div class="layer-grid">
+      <article class="layer-card">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600" alt="Permukaan daratan Bumi">
+        <div class="layer-number">01</div>
+        <div class="layer-body">
+          <h3>Kerak Bumi</h3>
+          <p>Lapisan paling luar dan paling tipis. Menjadi tempat manusia, hewan, dan tumbuhan hidup.</p>
+          <button class="text-button" data-layer="kerak">Pelajari Materi</button>
+        </div>
+      </article>
+
+      <article class="layer-card">
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600" alt="Batuan dan material alam">
+        <div class="layer-number">02</div>
+        <div class="layer-body">
+          <h3>Mantel Bumi</h3>
+          <p>Lapisan sangat tebal di bawah kerak yang tersusun dari batuan panas dan dapat mengalir perlahan.</p>
+          <button class="text-button" data-layer="mantel">Pelajari Materi</button>
+        </div>
+      </article>
+
+      <article class="layer-card">
+        <img src="https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?w=600" alt="Cahaya panas">
+        <div class="layer-number">03</div>
+        <div class="layer-body">
+          <h3>Inti Luar</h3>
+          <p>Lapisan logam cair yang terutama terdiri dari besi dan nikel. Pergerakannya membantu membentuk medan magnet Bumi.</p>
+          <button class="text-button" data-layer="inti-luar">Pelajari Materi</button>
+        </div>
+      </article>
+
+      <article class="layer-card">
+        <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=600" alt="Ilustrasi cahaya di luar angkasa">
+        <div class="layer-number">04</div>
+        <div class="layer-body">
+          <h3>Inti Dalam</h3>
+          <p>Bagian paling dalam Bumi yang berbentuk padat dan tersusun terutama dari besi dan nikel.</p>
+          <button class="text-button" data-layer="inti-dalam">Pelajari Materi</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="detail-panel" id="materiDetail" aria-live="polite">
+      <h3>Pilih salah satu lapisan Bumi</h3>
+      <p>Tekan tombol Pelajari Materi untuk membaca penjelasan lebih lengkap.</p>
+    </div>
+  </section>
+
+  <!-- EKSPLORASI -->
+  <section class="explore-section" id="eksplorasi">
+    <div class="section-heading">
+      <span class="eyebrow">LABORATORIUM BUMI</span>
+      <h2>Eksplorasi Struktur Bumi</h2>
+      <p>Amati gambaran penampang Bumi dan pilih lapisan yang ingin kamu pelajari.</p>
+    </div>
+
+    <div class="explore-layout">
+      <div class="earth-cutaway" role="img" aria-label="Ilustrasi empat lapisan Bumi">
+        <div class="earth-layer crust">
+          <div class="earth-layer mantle">
+            <div class="earth-layer outer-core">
+              <div class="earth-layer inner-core"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="explore-info">
+        <h3>Bagian Dalam Planet Bumi</h3>
+        <p>Setiap lapisan memiliki susunan, suhu, ketebalan, dan karakteristik yang berbeda.</p>
+        <button class="layer-choice" data-layer="kerak">01 — Kerak Bumi</button>
+        <button class="layer-choice" data-layer="mantel">02 — Mantel Bumi</button>
+        <button class="layer-choice" data-layer="inti-luar">03 — Inti Luar</button>
+        <button class="layer-choice" data-layer="inti-dalam">04 — Inti Dalam</button>
+        <div id="exploreDetail" class="detail-panel">
+          Pilih salah satu lapisan untuk melihat keterangannya.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME -->
+  <section class="section" id="game">
+    <div class="section-heading">
+      <span class="eyebrow">BERMAIN SAMBIL BELAJAR</span>
+      <h2>Game Edukasi Bumi</h2>
+      <p>Coba cocokkan nama lapisan dengan penjelasan yang benar.</p>
+    </div>
+
+    <div class="game-box">
+      <div class="game-top">
+        <h3>Game Mencocokkan Lapisan</h3>
+        <span id="gameScore">Skor: 0 / 4</span>
+      </div>
+      <p>Pilih satu nama lapisan, kemudian pilih penjelasan yang sesuai.</p>
+
+      <div class="matching-grid">
+        <div>
+          <h4>Nama Lapisan</h4>
+          <button class="match-name" data-match="kerak">Kerak Bumi</button>
+          <button class="match-name" data-match="mantel">Mantel Bumi</button>
+          <button class="match-name" data-match="inti-luar">Inti Luar</button>
+          <button class="match-name" data-match="inti-dalam">Inti Dalam</button>
+        </div>
+        <div>
+          <h4>Penjelasan</h4>
+          <button class="match-answer" data-answer="inti-dalam">Bagian paling dalam yang padat.</button>
+          <button class="match-answer" data-answer="kerak">Lapisan paling luar dan tipis.</button>
+          <button class="match-answer" data-answer="inti-luar">Lapisan logam cair.</button>
+          <button class="match-answer" data-answer="mantel">Lapisan batuan sangat tebal.</button>
+        </div>
+      </div>
+      <p id="gameMessage" class="game-message" aria-live="polite">Pilih pasangan yang benar!</p>
+      <button class="btn btn-primary" id="resetGame">Ulangi Permainan</button>
+    </div>
+  </section>
+
+  <!-- KUIS -->
+  <section class="quiz-section" id="kuis">
+    <div class="section-heading">
+      <span class="eyebrow">UJI PENGETAHUANMU</span>
+      <h2>Kuis Lapisan Bumi</h2>
+      <p>Jawab pertanyaan berikut dan lihat hasil belajarmu.</p>
+    </div>
+
+    <div class="quiz-box" id="quizBox">
+      <div class="quiz-top">
+        <span id="questionNumber">Pertanyaan 1 dari 5</span>
+        <span id="quizProgressText">0%</span>
+      </div>
+      <div class="progress-track"><div id="quizProgress"></div></div>
+      <h3 id="questionText">Memuat pertanyaan...</h3>
+      <div id="answerOptions" class="answer-options"></div>
+      <p id="quizFeedback" aria-live="polite"></p>
+      <button id="nextQuestion" class="btn btn-primary" disabled>Soal Berikutnya</button>
+    </div>
+
+    <div class="quiz-result" id="quizResult" hidden>
+      <h3>Hasil Kuis Kamu</h3>
+      <strong id="finalScore">0</strong>
+      <p id="resultMessage"></p>
+      <button class="btn btn-primary" id="retryQuiz">Ulangi Kuis</button>
+    </div>
+  </section>
+
+  <!-- PROFIL -->
+  <section class="section" id="profil">
+    <div class="section-heading">
+      <span class="eyebrow">PERJALANAN BELAJARMU</span>
+      <h2>Profil dan Progres</h2>
+      <p>Lihat perkembangan pembelajaranmu di website ini.</p>
+    </div>
+
+    <div class="profile-box">
+      <div class="profile-avatar">JB</div>
+      <div class="profile-content">
+        <label for="userName">Nama Penjelajah</label>
+        <input id="userName" type="text" maxlength="35" placeholder="Masukkan nama kamu">
+        <button class="btn btn-primary" id="saveName">Simpan Nama</button>
+      </div>
+    </div>
+
+    <div class="progress-cards">
+      <div><strong id="learnedCount">0</strong><span>Materi dipelajari</span></div>
+      <div><strong id="bestScore">0</strong><span>Nilai terbaik</span></div>
+      <div><strong id="gameBest">0</strong><span>Pasangan benar</span></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-brand">Jelajah Bumi</div>
+  <p>Belajar mengenal planet Bumi dengan cara yang menyenangkan.</p>
+  <p class="copyright">© 2026 Jelajah Bumi. Media Pembelajaran Lapisan Bumi.</p>
 </footer>
 
-<script src="script.js"></script>
+<button id="backTop" class="back-top" aria-label="Kembali ke atas">↑</button>
 
+<script src="script.js"></script>
 </body>
 </html>
